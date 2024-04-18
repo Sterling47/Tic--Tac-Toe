@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(163, 144, 144);
+    margin: 0;
+    padding: 0;
+    font-family: "Jersey 10", sans-serif;
+    color: #30323D;
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.player-1,
+.player-2 {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    background-color: #355282;
+}
+
+.mainboard-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    background: #E8C547;
+    box-shadow: rgba(60, 64, 67, 0.99) 0px 1px 2px 0px, rgba(8, 8, 8, 0.95) 0px 1px 3px 1px;
+}
+
+.board-box {
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.cell {
+    width: 8rem;
+    height: 8rem;
+    border: .5rem dashed rgba(48, 50, 61, .8);
+}
+
+.cell1,
+.cell4,
+.cell7 {
+    border-top: none;
+}
+
+.cell1,
+.cell2,
+.cell3 {
+    border-left: none;
+}
+
+.cell7,
+.cell8,
+.cell9 {
+    border-right: none;
+}
+
+.cell3,
+.cell6,
+.cell9 {
+    border-bottom: none;
+}
