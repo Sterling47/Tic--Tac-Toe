@@ -1,5 +1,7 @@
 
-var cells = []
+var currentPlayer;
+var player1;
+var player2;
 
 function playerInfo(name, id, token) {
     var player = {
@@ -11,9 +13,8 @@ function playerInfo(name, id, token) {
     return player
 }
 
-var player1 = playerInfo('player 1', 1, 'X')
-
-var player2 = playerInfo('player 2', 2, 'O')
+player1 = playerInfo('player 1', 1, 'X')
+player2 = playerInfo('player 2', 2, 'O')
 
 
 function addWin(winner) {
@@ -23,10 +24,18 @@ function addWin(winner) {
 
 function gameBoard() {
     return [
-        [ , , ],
-        [ , , ],
-        [ , , ]
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
     ]
+}
+
+function currentPlayersTurn(){
+    if(currentPlayer === player1){
+        currentPlayer = player2
+    } else {
+        currentPlayer = player1
+    }
 }
 
 

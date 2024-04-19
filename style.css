@@ -49,6 +49,10 @@ main {
 
 
 .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
     width: 8rem;
     height: 8rem;
     border: .5rem dashed rgba(48, 50, 61, .8);
