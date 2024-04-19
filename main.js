@@ -21,4 +21,12 @@ function addWin(winner) {
     return winner
 }
 
+function gameBoard() {
+    return [
+        [ , , ],
+        [ , , ],
+        [ , , ]
+    ]
+}
+
 
