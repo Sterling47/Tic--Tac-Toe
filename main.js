@@ -1,11 +1,8 @@
 // Query Selectors
-var mainSection = document.querySelector('.mainboard-section')
-var game_Board = document.querySelector('board-box') 
 var player1Section = document.querySelector('.player-1')
 var player2Section = document.querySelector('.player-2')
 var gameTitle = document.querySelector('.game-title')
 var cells = document.querySelectorAll('.cell')
-
 
 // Global Variables
 var currentPlayer;
@@ -67,4 +64,12 @@ function displayPlayersTurn(){
     }
 }
 
+function startGame() {
+    player1 = createPlayer('player 1', 1, 'X')
+    player2 = createPlayer('player 2', 2, 'O')
+    currentPlayer = player1;
+    gameTitle.innerText = `${currentPlayer.name} turn!`
+    displayPlayersTurn();
+}
 
+startGame();
