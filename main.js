@@ -67,6 +67,7 @@ function checkIfEmpty(e) {
         e.target.textContent = currentPlayer.token
         board[row][col] = currentPlayer.token
         checkIfDraw();
+        console.log(board)
     } else {
         errorMssg.innerText = 'Please select an empty square'
     }
@@ -119,4 +120,5 @@ function resetGame() {
 }
 
 startGame();
+
 
