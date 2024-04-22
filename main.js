@@ -3,6 +3,7 @@ var player1Section = document.querySelector('.player-1')
 var player2Section = document.querySelector('.player-2')
 var gameTitle = document.querySelector('.game-title')
 var cells = document.querySelectorAll('.cell')
+var errorMssg = document.querySelector('.error-message')
 
 // Global Variables
 var currentPlayer;
@@ -50,11 +51,12 @@ function currentPlayersTurn() {
 }
 
 function checkIfEmpty(e){
+    errorMssg.innerText = '';
  if(!e.target.textContent){
     e.target.textContent = currentPlayer.token
     currentPlayersTurn();
  } else {
-    alert('pick a empty cell')
+    errorMssg.innerText = 'Please select an empty square'
  }
 }
 

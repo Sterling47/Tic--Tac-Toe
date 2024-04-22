@@ -81,3 +81,9 @@ main {
 .cell9 {
     border-bottom: none;
 }
+
+
+.error-message{
+    color: red;
+    font-size: 1.5rem;
+}
