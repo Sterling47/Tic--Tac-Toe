@@ -1,11 +1,9 @@
 // Query Selectors
-var mainSection = document.querySelector('.mainboard-section')
-var game_Board = document.querySelector('board-box') 
 var player1Section = document.querySelector('.player-1')
 var player2Section = document.querySelector('.player-2')
 var gameTitle = document.querySelector('.game-title')
 var cells = document.querySelectorAll('.cell')
-
+var errorMssg = document.querySelector('.error-message')
 
 // Global Variables
 var currentPlayer;
@@ -27,20 +25,19 @@ function createPlayer(name, id, token) {
     return player
 }
 
-function gameBoard() {
-    board = [
-        ['', '', ''],
-        ['', '', ''],
-        ['', '', '']
-    ]
-}
-
-function addWin(winner) {
+function increasesWins(winner) {
     winner.wins++
-    player1Section.innerHTML = `
+    if(winner.token === 'X'){
+        player1Section.innerHTML = `
     <h2 class="p1-header">player 1</h2>
-    <h2 class="p1=score">${winner.wins}</h2>
+    <h3> Wins: ${player1.wins} </h3>
     `
+    } else {
+        player2Section.innerHTML = `
+    <h2 class="p2-header">player 2</h2>
+    <h3> Wins: ${player2.wins} </h3>
+    `
+    }
 }
 
 function currentPlayersTurn() {
@@ -52,12 +49,62 @@ function currentPlayersTurn() {
     gameTitle.innerText = `${currentPlayer.name} turn!`
 }
 
-function checkIfEmpty(e){
- if(!e.target.textContent){
-    e.target.textContent = currentPlayer.token
-    currentPlayersTurn();
- } else {
-    alert('pick a empty cell')
- }
+function checkIfEmpty(e) {
+    errorMssg.innerText = '';
+    if (!e.target.textContent) {
+        e.target.textContent = currentPlayer.token
+        checkIfDraw();
+    } else {
+        errorMssg.innerText = 'Please select an empty square'
+    }
 }
+
+function checkIfDraw() {
+    var draw = true;
+    for (var i = 0; i < cells.length; i++) {
+        if (!cells[i].textContent) {
+            draw = false
+        }
+    }
+
+    if (draw) {
+       gameTitle.innerText ='Its a draw!' 
+       setTimeout(resetGame, 3000)
+    } else {
+        currentPlayersTurn()
+    }
+}
+
+function displayPlayersTurn() {
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].addEventListener('click', checkIfEmpty)
+    }
+}
+
+function startGame() {  
+    player1 = createPlayer('player 1', 1, 'X')
+    player2 = createPlayer('player 2', 2, 'O')
+    currentPlayer = player1;
+    gameTitle.innerText = `${currentPlayer.name} turn!`
+    player1Section.innerHTML = `
+    <h2 class="p1-header">player 1</h2>
+    <h3> Wins: ${player1.wins} </h3>
+    `
+    player2Section.innerHTML = `
+    <h2 class="p2-header">player 2</h2>
+    <h3> Wins: ${player2.wins} </h3>
+    `
+    displayPlayersTurn();
+    gameBoard();
+}
+
+function resetGame() {
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].textContent = ''
+    }
+    gameTitle.innerText = `${currentPlayer.name} turn!`
+
+}
+
+startGame();
 
