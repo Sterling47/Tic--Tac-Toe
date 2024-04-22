@@ -25,6 +25,14 @@ function createPlayer(name, id, token) {
     return player
 }
 
+function gameBoard() {
+    board = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ]
+}
+
 function increasesWins(winner) {
     winner.wins++
     if(winner.token === 'X'){
@@ -51,8 +59,13 @@ function currentPlayersTurn() {
 
 function checkIfEmpty(e) {
     errorMssg.innerText = '';
+    var cellIndex = Array.from(cells).indexOf(e.target);
+    var col = Math.floor(cellIndex / 3);
+    var row = cellIndex % 3;
+
     if (!e.target.textContent) {
         e.target.textContent = currentPlayer.token
+        board[row][col] = currentPlayer.token
         checkIfDraw();
     } else {
         errorMssg.innerText = 'Please select an empty square'
@@ -66,7 +79,6 @@ function checkIfDraw() {
             draw = false
         }
     }
-
     if (draw) {
        gameTitle.innerText ='Its a draw!' 
        setTimeout(resetGame, 3000)
@@ -102,8 +114,8 @@ function resetGame() {
     for (var i = 0; i < cells.length; i++) {
         cells[i].textContent = ''
     }
+    gameBoard();
     gameTitle.innerText = `${currentPlayer.name} turn!`
-
 }
 
 startGame();
