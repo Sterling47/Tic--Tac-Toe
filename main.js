@@ -121,9 +121,14 @@ function checkIfDraw() {
 }
 
 function startGame() { 
+    var p1storedWins = JSON.parse(localStorage.getItem('p1wins'))
+    var p2storedWins = JSON.parse(localStorage.getItem('p2wins'))
+
     whoGoesFirst = whoGoesFirst || player1
     currentPlayer = whoGoesFirst
-    gameTitle.innerText = `${currentPlayer.name} turn!`
+
+    if(!p1storedWins || !p2storedWins){
+      gameTitle.innerText = `${currentPlayer.name} turn!`
     player1Section.innerHTML = `
     <h2 class="p1-header">player 1</h2>
     <h3> Wins: ${player1.wins} </h3>
@@ -131,12 +136,26 @@ function startGame() {
     player2Section.innerHTML = `
     <h2 class="p2-header">player 2</h2>
     <h3> Wins: ${player2.wins} </h3>
+    `  
+    } else {
+        gameTitle.innerText = `${currentPlayer.name} turn!`
+    player1Section.innerHTML = `
+    <h2 class="p1-header">player 1</h2>
+    <h3> Wins: ${p1storedWins} </h3>
     `
+    player2Section.innerHTML = `
+    <h2 class="p2-header">player 2</h2>
+    <h3> Wins: ${p2storedWins} </h3>
+    `
+    }
     gameBoard();
     setTimeout(addEventListenerToCells, 500);
 }
 
 function resetGame() {
+    localStorage.setItem('p1wins', player1.wins.toString())
+    localStorage.setItem('p2wins', player2.wins.toString())
+
     if(whoGoesFirst === player1) {
         whoGoesFirst = player2
     } else {
