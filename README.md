@@ -6,11 +6,14 @@
 HTML5, CSS, and JavaScript
 
 ## Setup
-1. Click [Repo](https://github.com/Sterling47/Tic--Tac-Toe)
-2. Fork and clone to local enviroment.
-3. cd into Tic-Tac-Toe
-run open index.html
-4. Enjoy!
+ ### Deploy
+ [Play Game](https://sterling47.github.io/Tic--Tac-Toe/)
+ ### Fork & Clone
+ 1. Click [Repo](https://github.com/Sterling47/Tic--Tac-Toe)
+ 2. Fork and clone to local enviroment.
+ 3. cd into Tic-Tac-Toe
+ run open index.html
+ 4. Enjoy!
 
 ## Preview
 ![screenShot1](https://private-user-images.githubusercontent.com/116218432/324914110-f3cd6e35-ac5b-44eb-81e5-919581c98f12.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM4ODk5ODcsIm5iZiI6MTcxMzg4OTY4NywicGF0aCI6Ii8xMTYyMTg0MzIvMzI0OTE0MTEwLWYzY2Q2ZTM1LWFjNWItNDRlYi04MWU1LTkxOTU4MWM5OGYxMi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQyM1QxNjI4MDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NjM1Yzk3MGMyNWI3ZjQ1MDA5Njc2YzQxMTc5MDAxNTdlMzQxNmU4MGMxODkxMmZhY2Y1NTMzMjRlNTc4MDgxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.1hEdbz3WN4fwkufs8_EdXo6_e0WEcy9FJKbBOWiBuyg)
