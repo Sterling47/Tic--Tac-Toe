@@ -5,12 +5,21 @@ var gameTitle = document.querySelector('.game-title')
 var cells = document.querySelectorAll('.cell')
 var errorMssg = document.querySelector('.error-message')
 
+
 // Global Variables
 var currentPlayer;
 var player1 = createPlayer('Player 1', 1, 'X')
 var player2 = createPlayer('Player 2', 2, 'O')
 var board;
 var win = false;
+var whoGoesFirst  
+
+//Event Listener Function
+function addEventListenerToCells() {
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].addEventListener('click', checkIfEmpty)
+    }
+}
 
 //functions
 function createPlayer(name, id, token) {
@@ -111,14 +120,8 @@ function checkIfDraw() {
     }
 }
 
-function addEventListenerToCells() {
-    for (var i = 0; i < cells.length; i++) {
-        cells[i].addEventListener('click', checkIfEmpty)
-    }
-}
-
-function startGame() {
-    currentPlayer = player1;
+function startGame() { 
+    currentPlayer = whoGoesFirst || player1
     gameTitle.innerText = `${currentPlayer.name} turn!`
     player1Section.innerHTML = `
     <h2 class="p1-header">player 1</h2>
@@ -133,6 +136,11 @@ function startGame() {
 }
 
 function resetGame() {
+    if(currentPlayer === player1) {
+        whoGoesFirst = player2
+    } else {
+        whoGoesFirst = player1
+    }
     win = false
     for (var i = 0; i < cells.length; i++) {
         cells[i].textContent = ''
