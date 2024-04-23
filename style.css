@@ -10,7 +10,6 @@ main {
     display: flex;
     flex-direction: row;
     height: 100vh;
-   
 }
 
 .player-1,
@@ -39,15 +38,12 @@ main {
     display: flex;
     flex-direction: row;
     margin: 3rem;
-
 }
 
 .board {
     display: flex;
     flex-direction: column;
-
 }
-
 
 .cell {
     display: flex;
@@ -59,32 +55,31 @@ main {
     border: .5rem dashed rgba(48, 50, 61, .8);
 }
 
-.cell1,
-.cell4,
-.cell7 {
+.cell-1,
+.cell-4,
+.cell-7 {
     border-top: none;
 }
 
-.cell1,
-.cell2,
-.cell3 {
+.cell-1,
+.cell-2,
+.cell-3 {
     border-left: none;
 }
 
-.cell7,
-.cell8,
-.cell9 {
+.cell-7,
+.cell-8,
+.cell-9 {
     border-right: none;
 }
 
-.cell3,
-.cell6,
-.cell9 {
+.cell-3,
+.cell-6,
+.cell-9 {
     border-bottom: none;
 }
 
-
-.error-message{
+.error-message {
     color: red;
     font-size: 1.5rem;
 }
