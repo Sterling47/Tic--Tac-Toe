@@ -121,7 +121,8 @@ function checkIfDraw() {
 }
 
 function startGame() { 
-    currentPlayer = whoGoesFirst || player1
+    whoGoesFirst = whoGoesFirst || player1
+    currentPlayer = whoGoesFirst
     gameTitle.innerText = `${currentPlayer.name} turn!`
     player1Section.innerHTML = `
     <h2 class="p1-header">player 1</h2>
@@ -136,7 +137,7 @@ function startGame() {
 }
 
 function resetGame() {
-    if(currentPlayer === player1) {
+    if(whoGoesFirst === player1) {
         whoGoesFirst = player2
     } else {
         whoGoesFirst = player1
