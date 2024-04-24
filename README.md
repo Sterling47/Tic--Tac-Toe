@@ -23,7 +23,7 @@ HTML5, CSS, and JavaScript
 ![Player2Wins](https://private-user-images.githubusercontent.com/116218432/324917223-41b347f3-bbb7-43ce-a483-6dd60ac62846.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTM4OTAyNzQsIm5iZiI6MTcxMzg4OTk3NCwicGF0aCI6Ii8xMTYyMTg0MzIvMzI0OTE3MjIzLTQxYjM0N2YzLWJiYjctNDNjZS1hNDgzLTZkZDYwYWM2Mjg0Ni5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQyM1QxNjMyNTRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mMzRmYWI4MDk1YzYwNTgyZGFiM2M3ZmVhODA0Nzk5NGQyZDViNmVlODNlZGQxMzkxZjJmNjk0OWRjYTI5ZGZjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Nc2uU0AA2SfPxTzYIzrFYipRXjK4can5fCaCrrCRYmo)
 
 ## Context
-This is my final solo project for the end of Mod 1. This project showcases my understanding and use of, functions, for loops, if statements, querySelectors and eventListeners. I incorporate these tools in my application by checking for win and draw conditions, updating the dom and updating the data model.
+This is my final solo project for the end of Mod 1. This project showcases my understanding and use of functions, for loops, if statements, querySelectors and eventListeners. I incorporate these concepts in my application by checking for win and draw conditions, updating the dom and updating the data model.
 
 ## Contributers
   Adam Konber [Github](https://github.com/Sterling47)
